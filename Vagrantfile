@@ -100,6 +100,22 @@ Vagrant.configure("2") do |config|
 	service apache2 reload
   SHELL
  end
+ 
+ #VM2 for adminserver
+  config.vm.define "adminserver" do | adminserver |
+	adminserver.vm.hostname = "adminserver"
+	adminserver.vm.provision "shell", inline: <<-SHELL
+	apt-get update
+	apt-get install -y apache2 php libapache2-mod-php php-mysql
+	cp /vagrant/admin-site.conf /etc/apache2/sites-available/
+	chmod 777 /vagrant
+	chmod 777 /vagrant/admin
+	chmod 777 /vagrant/admin/index.php
+	a2ensite admin-site
+	a2dissite 000-default
+	service apache2 reload
+  SHELL
+ end
 
   # Enable provisioning with a shell script. Additional provisioners such as
   # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
