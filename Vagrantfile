@@ -44,12 +44,12 @@ Vagrant.configure("2") do |config|
     # :aws configuration section.
 
     # The keypair_name parameter tells Amazon which public key to use.
-    aws.keypair_name = "cosc349-a2-2022"
+    aws.keypair_name = "a2-2022"
     # The private_key_path is a file location in your macOS account
     # (e.g., ~/.ssh/something).
     # For Windows users, just point to the path where you have downloaded the keypair
     # (e.g., C:\\Users\\<username>\\foo.pem). (Use double "\\" for folder path)
-    override.ssh.private_key_path = "C:\\Users\\User\\.ssh\\cosc349-a2-2022.pem"
+    override.ssh.private_key_path = "C:\\Users\\User\\.ssh\\a2-2022.pem"
 
     # Choose your Amazon EC2 instance type (t2.micro is cheap).
     aws.instance_type = "t2.micro"
