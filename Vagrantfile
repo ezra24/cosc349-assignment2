@@ -25,9 +25,9 @@ Vagrant.configure("2") do |config|
     # parameters from environment variables (more secure than
     # committing security credentials to your Vagrantfile).
     #
-    aws.access_key_id = "ASIA22ZDMLQZRU5DXFJN"
-    aws.secret_access_key = "79zWyT20blfgcNR2x+V7dgqWcZk2/Lyjh6USom9E"
-    aws.session_token = "FwoGZXIvYXdzEHIaDGpROJbxfZUTEWfBOyK9AeOnXt56qlwh7wFvOFkaflsHbIjTsQ1UAI44gqVFwtoA/mX/NE5pK9FqUmj3d81rr1i8QPJ3CfOzjuEkDphM/PnKWMPDolhgzp+vN2swUpkCo0BqY8kMAj6PTYgsmvKPgce6FdST4kHXW9fUgN8MR1WuFSt2Y7+EQ0JTefSAjF86TWnIUwdZOcvoFD6iU+l0aZLRGxU5PHTzQtdg7ketoAq6SRDN94rlp64GlbrJF3fl4oEVdb4WAuSLTiMhGCjJ+ISaBjIthUbPyufT4UdJqPnaeDDA5UGVyGdlVKCKo4fvgyX3MFqXuZBPhk+NcYCgxenD"
+    aws.access_key_id = ""
+    aws.secret_access_key = ""
+    aws.session_token = ""
 	
     # The region for Amazon Educate is fixed.
     aws.region = "us-east-1"
