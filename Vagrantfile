@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
     aws.secret_access_key = ""
     aws.session_token = ""
 	
-    # The region for Amazon Educate is fixed.
+	# The region for Amazon Educate is fixed.
     aws.region = "us-east-1"
 
     # These options force synchronisation of files to the VM's
@@ -59,7 +59,7 @@ Vagrant.configure("2") do |config|
     # they should be comma-separated (if you use more than one) within
     # square brackets.
     #
-    aws.security_groups = ["sg-01a820d61612a537f","sg-031bb590a4ffed0b1"]
+    aws.security_groups = ["sg-01a820d61612a537f","sg-031bb590a4ffed0b1", "sg-0fe92743655561019"]
 
     # For Vagrant to deploy to EC2 for Amazon Educate accounts, it
     # seems that a specific availability_zone needs to be selected
