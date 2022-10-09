@@ -7,7 +7,7 @@
 
 <?php
 
-	$db_connection = mysqli_connect('192.168.56.12', 'user-1', 'samoa1234', 'assetmanagement');
+	$db_connection = mysqli_connect('assetsdb.chemtctaalfh.us-east-1.rds.amazonaws.com', 'admin', 'hm9RAwT9cgyYBJ5Mf08b', 'assetsdb', 3306);
 	
 	/* Confirm connection to database */
 	if($db_connection === false) {
@@ -23,6 +23,7 @@
 	$location = mysqli_real_escape_string($db_connection, $_REQUEST['location']);
 	
 	$sql = "INSERT INTO assets (assetType, brand, modelno, serialno, datepurchased, location) VALUES ('$assetType', '$brand', '$modelno', '$serialno', '$datepurchased', '$location')";
+	       #INSERT INTO assets (assetType, brand, modelno, serialno, datepurchased, location) VALUES ('CPU','Dell','Optiplex 780', 'DGK8H63','2022/08/28','Level 1');
 	
 	if(mysqli_query($db_connection, $sql)) {
 		echo "Entry added successfully to Asset Management Database. </br>";
@@ -32,5 +33,6 @@
 	
 	mysqli_close($db_connection);
 ?></br>
-  <a href="http://192.168.56.13"> View Asset Database</a></br>
-  <a href="http://192.168.56.11"> Add new asset</a>
+  <a href="http://ec2-100-27-28-157.compute-1.amazonaws.com"> View Asset Database</a></br>
+  <a href="http://34.201.252.170/"> Add new asset</a>
+  </html>
