@@ -33,6 +33,6 @@
 	
 	mysqli_close($db_connection);
 ?></br>
-  <a href="http://ec2-100-27-28-157.compute-1.amazonaws.com"> View Asset Database</a></br>
-  <a href="http://34.201.252.170/"> Add new asset</a>
+  <a href="http://ec2-3-82-225-148.compute-1.amazonaws.com"> View Asset Database</a></br>
+  <a href="http://ec2-18-212-167-102.compute-1.amazonaws.com"> Add new asset</a>
   </html>
