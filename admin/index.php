@@ -22,14 +22,16 @@ th, td {
 
 <!--information from database-->
 <?php 
-$db_host   = '192.168.56.12';
-$db_name   = 'assetmanagement';
-$db_user   = 'user-1';
-$db_passwd = 'samoa1234';
+$dbhost   = 'assetsdb.chemtctaalfh.us-east-1.rds.amazonaws.com';
+$dbport = '3306';
+$dbname   = 'assetsdb';
+$charset = 'utf8';
 
-$pdo_dsn = "mysql:host=$db_host;dbname=$db_name";
+$dsn = "mysql:host=$dbhost;dbname=$dbname";
+$username   = 'admin';
+$password = 'hm9RAwT9cgyYBJ5Mf08b';
 
-$pdo = new PDO($pdo_dsn, $db_user, $db_passwd);
+$pdo = new PDO($dsn, $username, $password);
 
 $q = $pdo->query("SELECT * FROM assets");
 
